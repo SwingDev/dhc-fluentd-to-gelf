@@ -18,4 +18,4 @@ COPY plugin/out_gelf.rb /etc/fluent/plugin
 EXPOSE 24224
 
 USER fluent
-CMD exec fluentd -c /fluentd/etc/$FLUENTD_CONF -p /fluentd/plugins $FLUENTD_OPT
+CMD exec fluentd -c /fluentd/etc/$FLUENTD_CONF -p /fluentd/plugins $FLUENTD_OPT  --no-supervisor
